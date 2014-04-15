@@ -4,26 +4,26 @@ seleniumAccessibility
 Selenium Webdriver driven accessibility testing module to check for webpage accessibility compliance
 
 Introduction
-============
-   * Generic accessibility compliance check module that runs through any webpage looking for accessibility errors and warnings
-   * accessibilityCop-0.1.1.jar has basic set of 14 accessibility checkpoints that applies to most webpage
+------------
+   * Generic accessibility compliance test that runs through a webpage looking for accessibility errors and warnings
+   * accessibilityCop-0.1.1.jar built with basic set of 14 accessibility checkpoints that applies to most webpages
    * Selenium Webdriver, TestNg and Java
 
 Scope of version 0.1.1
-=================
-   * Provide seleniumAccessibility jar with basic accessibility checkpoints - 14 rules
-   * Get feedback from accessibility experts and further improve depth of testing and rules coverage
+----------------------
+   * Design and develop seleniumAccessibility jar with basic accessibility checkpoints - 14 rules
+   * Gather feedback from accessibility experts and further improve depth of testing and rules coverage
    * Socialize accessibility testing to be part of mainstream quality testing efforts
 
 Usage
-=====
+-----
    * Download latest version of accessibility test jar file from here : [accessibilityCop-0.1.1.jar](accessibilityCop/target/accessibilityCop-0.1.1.jar)
-   * Include the jar as part of your existing selenium project
+   * Include this jar as part of your existing selenium project
    * Create selenium test to feed in webpage urls that needs to be tested for accessibility compliance
    * Add appropriate assertions to validate errors/warnings returned by runAcopChecks() method
 
 AcopChecksV1.java
-=================
+-----------------
    * 14-point check for accessibility compliance
    * Adds errors, warnings and log information to acopErrorList
    * Returns acopErrorList to the testNg test
@@ -114,20 +114,22 @@ Accessibility Checkpoints
 
 
 Additional Resources
-====================
+--------------------
 [w3c Web Content Accessibility Guildelines](http://www.w3.org/TR/WCAG10/)
 
 
 Credits
-=======
+-------
    * Thanks to [Avinash Padmanabhan](http://eveningsamurai.wordpress.com) for teaming up to build accessibility rules and automated tests to help improve web accessibility compliance. Avinash has also developed a ruby version of accessibility tests and its publicly available at: [Ruby Acop Git Hub page](https://github.com/eveningsamurai/acop)
+   * [Ted Drake](https://twitter.com/ted_drake)
+   * Niru Anisetti
 
 
 Bugs
-====
+----
 Report bugs and requests at [seleniumAccessibility Github page](https://github.com/neurites/seleniumAccessibility)
 
 
 Copyright
-=========
+----------
 Copyright 2014 by [Anil Suryanarayana](https://github.com/neurites/seleniumAccessibility) under the MIT license (see the [LICENSE file](https://github.com/neurites/seleniumAccessibility/blob/master/LICENSE)).
