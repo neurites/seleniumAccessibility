@@ -25,11 +25,25 @@ Usage
 AcopChecksV1.java
 -----------------
    * 14-point check for accessibility compliance
-   * Adds errors, warnings and log information to acopErrorList
+   * Adds errors, warnings to acopErrorList; Also prints log information related to accessibility checks
    * Returns acopErrorList to the testNg test
       * if acopErrorList is empty - no accessibility issues on webpage
       * if acopErrorList is not empty - accessibility issues found on webpage
 
+Sample Test
+-----------
+	/**
+	* sampleAcopChecks
+	*
+	*/
+	@Test(groups = { "Accessibility"})
+	public void sampleAcopChecks() {
+		final String url = "http://www.intuit.com";
+		driver.get(url);
+		ACopChecksV1 sbc = new ACopChecksV1(driver);
+		List<String> getAccessibilityErrors = sbc.runAcopChecks();
+		Assert.assertTrue(getAccessibilityErrors.isEmpty(), " Accessibility errors found for webpage - " +url);
+	}
 
 Accessibility Checkpoints
 =========================
