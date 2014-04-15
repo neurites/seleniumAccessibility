@@ -34,119 +34,83 @@ AcopChecksV1.java
 Accessibility Checkpoints
 =========================
 
-Standard Web Programming
-------------------------
-<!DOCTYPE Resource SYSTEM 'foo.dtd'>
+### Standard Web Programming
+`<!DOCTYPE Resource SYSTEM 'foo.dtd'>`
+*   Doctype should be specified if frame or iframe elements exist on the page
 
-   * Doctype should be specified if frame or iframe elements exist on the page
+### Appropriate Markup
+*   HTML visual formatting elements like `<b></b>`, `<i></i>`, `<center></center>`, `<font></font>`, `<u></u>` should not be used. Use CSS for formatting instead
 
-Appropriate Markup
-------------------
-   * HTML visual formatting elements like <b></b>, <i></i>, <center></center>, <font></font>, <u></u> should not be used. Use CSS for formatting instead
+### Title
+`<title></title>`  
+*   Page title element should not be empty or missing
+*   There should not be more than one page title
 
-Title
-------
-<title></title>
+`<frameset><frame title=""...`  
+*   Frame elements should have title attributes  
+*   Frame elements should not have title attributes empty  
 
-   * Page title element should not be empty or missing
-   * There should not be more than one page title
+`<iframe title=""...`
+*   iFrame elements should have title attributes  
+*   iFrame elements should not have title attributes empty  
 
-<frameset><frame title=""...
+### Headings
+`<body><p><h1>Heading 1</h1><h2>Heading 2</h2><p><h3>Heading 3</h3></p></body>`
+*   Page must contain atleast one h1 element
+*   The h1 element should have non empty text
+*   Heading elements that follow the h1 element should be properly nested
+*   All subheadings(h2..h6) should have non empty text
 
-   * Frame elements should have title attributes
+### HTML lang
+`<html lang='en'></html>`
+*   You should declare the primary language of a page with the html lang attribute
 
-   * Frame elements should not have title attributes empty
+### Hyperlinks
+`<body><a href="www.google.com">Go to Google</a></body>`
+*   Hyperlinks should always have text associated with them
+*   There should not be duplicate text for hyperlinks on the same page
 
-<iframe title=""...
+### Images  
+`<input type='image'...`  
+*   Image inputs elements should have alt attributes  
+*   Image inputs elements should not have alt attributes empty
 
-   * iFrame elements should have title attributes
+`<img...`  
+*   Image elements should have alt attributes  
+*   Image elements should not have alt attributes empty  
 
-   * iFrame elements should not have title attributes empty
+`<a><img...`  
+*   Image elements inside anchor tags should have empty alt attributes  
 
-Headings
---------
+### Area
+`<area shape='rect' coords='0,0,82,126' href='sun.htm' alt='Sun'>`  
+*   Area elements should have an alt attribute  
+*   Area element alt attribute cannot be empty
 
-<body><p><h1>Heading 1</h1><h2>Heading 2</h2><p><h3>Heading 3</h3></p></body>
+### Flashing content
+*   The blink and marquee elements must not be used. Blinking and moving text are an accessibility problems for people with photosenstive epilepsy and visual impairments.
 
-   * Page must contain atleast one h1 element
-   * The h1 element should have non empty text
-   * Heading elements that follow the h1 element should be properly nested
-   * All subheadings(h2..h6) should have non empty text
+### Forms
+`<form><textarea id='area' rows='3' cols='3'></textarea><label for='area'/></form>`
+*   Every form element should have a corresponding label (the label 'for' attribute should match the form field 'id' attribute)
 
-HTML lang
----------
-<html lang='en'></html>
+`<form><input id='in' type='text' value="input_value"/></form>`
+*   Form input elements of type submit|reset|button should not have labels, instead have a non empty 'value' attribute
 
-   * You should declare the primary language of a page with the html lang attribute
+`<label for="label1">Label 1</label><label for="label2">Label 2</label>`
+*   Labels for form controls should have non-empty text
 
-Hyperlinks
-----------
-<body><a href="www.google.com">Go to Google</a></body>
+`<legend>Legend 1</legend>`
+*   Legends specified for fieldsets or otherwise should have non-empty text
 
-   * Hyperlinks should always have text associated with them
-   * There should not be duplicate text for hyperlinks on the same page
+`<button type="button">Button 1</button>`
+*   Buttons should have non-empty text
 
-Images
-------
-<input type='image'...
-
-   * Image inputs elements should have alt attributes
-
-   * Image inputs elements should not have alt attributes empty
-
-<img...
-
-   * Image elements should have alt attributes
-
-   * Image elements should not have alt attributes empty
-
-
-<a><img...
-
-   * Image elements inside anchor tags should have empty alt attributes
-
-
-Area
--------
-<area shape='rect' coords='0,0,82,126' href='sun.htm' alt='Sun'>
-
-   * Area elements should have an alt attribute
-
-   * Area element alt attribute cannot be empty
-
-Flashing content
-----------------
-   * The blink and marquee elements must not be used. Blinking and moving text are an accessibility problems for people with photosenstive epilepsy and visual impairments.
-
-Forms
-------
-<form><textarea id='area' rows='3' cols='3'></textarea><label for='area'/></form>
-
-   * Every form element should have a corresponding label (the label 'for' attribute should match the form field 'id' attribute)
-
-<form><input id='in' type='text' value="input_value"/></form>
-
-   * Form input elements of type submit|reset|button should not have labels, instead have a non empty 'value' attribute
-
-<label for="label1">Label 1</label><label for="label2">Label 2</label>
-
-   * Labels for form controls should have non-empty text
-
-<legend>Legend 1</legend>
-
-   * Legends specified for fieldsets or otherwise should have non-empty text
-
-<button type="button">Button 1</button>
-
-   * Buttons should have non-empty text
-
-Tables
-------
-<table summary="summary"><th>Table Heading</th><tr><td>Data 1</td></tr></table>
-
-   * Table should have a table header
-   * Table should have a non empty summary attribute
-   * Table headers should have a non empty scope attribute specifying whether it is for a row or column
+### Tables
+`<table summary="summary"><th>Table Heading</th><tr><td>Data 1</td></tr></table>`
+*   Table should have a table header
+*   Table should have a non empty summary attribute
+*   Table headers should have a non empty scope attribute specifying whether it is for a row or column
 
 
 Additional Resources
@@ -166,4 +130,4 @@ Report bugs and requests at [seleniumAccessibility Github page](https://github.c
 
 Copyright
 =========
-Copyright 2014 by [Anil Suryanarayana]( https://github.com/neurites/seleniumAccessibility) under the MIT license (see the LICENSE file ](http://eveningsamurai.Anil Suryanarayana under the MIT license (see the [LICENSE file](https://github.com/neurites/seleniumAccessibility/blob/master/LICENSE)).
+Copyright 2014 by [Anil Suryanarayana](https://github.com/neurites/seleniumAccessibility) under the MIT license (see the [LICENSE file](https://github.com/neurites/seleniumAccessibility/blob/master/LICENSE)).
