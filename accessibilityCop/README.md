@@ -50,10 +50,6 @@ Accessibility Checkpoints
 *   Frame elements should have title attributes  
 *   Frame elements should not have title attributes empty  
 
-`<iframe title=""...`
-*   iFrame elements should have title attributes  
-*   iFrame elements should not have title attributes empty  
-
 ### Headings
 `<body><p><h1>Heading 1</h1><h2>Heading 2</h2><p><h3>Heading 3</h3></p></body>`
 *   Page must contain atleast one h1 element
@@ -77,7 +73,6 @@ Accessibility Checkpoints
 
 `<img...`  
 *   Image elements should have alt attributes  
-*   Image elements should not have alt attributes empty  
 
 `<a><img...`  
 *   Image elements inside anchor tags should have empty alt attributes  
