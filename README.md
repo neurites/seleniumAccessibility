@@ -127,13 +127,6 @@ Additional Resources
 [w3c Web Content Accessibility Guildelines](http://www.w3.org/TR/WCAG10/)
 
 
-Credits
--------
-   * Thanks to [Avinash Padmanabhan](http://eveningsamurai.wordpress.com) for teaming up to build accessibility rules and automated tests to help improve web accessibility compliance. Avinash has also developed a ruby version of accessibility tests and its publicly available at: [Ruby Acop Git Hub page](https://github.com/eveningsamurai/acop)
-   * [Ted Drake](https://twitter.com/ted_drake)
-   * Niru Anisetti
-
-
 Bugs
 ----
 Report bugs and requests at [seleniumAccessibility Github page](https://github.com/neurites/seleniumAccessibility)
