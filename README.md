@@ -60,9 +60,6 @@ Accessibility Checkpoints
 *   Page title element should not be empty or missing
 *   There should not be more than one page title
 
-`<frameset><frame title=""...`  
-*   Frame elements should have title attributes  
-*   Frame elements should not have title attributes empty  
 
 ### Headings
 `<body><p><h1>Heading 1</h1><h2>Heading 2</h2><p><h3>Heading 3</h3></p></body>`
@@ -131,6 +128,11 @@ Bugs
 ----
 Report bugs and requests at [seleniumAccessibility Github page](https://github.com/neurites/seleniumAccessibility)
 
+Credits
+-------
+   * Anil Suryanarayana - https://github.com/neurites/seleniumAccessibility
+   * Accessibility Guru - [Ted Drake](https://twitter.com/ted_drake)
+   * Senior Marketing Product Manager - Niru Anisetti
 
 Copyright
 ----------
